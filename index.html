@@ -44,11 +44,12 @@
                 bottom: 300px;
                 background-color: black;
                 display: flex;
+                animation: back 50s linear forwards;
 
                 >div {
                     width: 100vw;
                     height: 300px;
-                    border: 10px solid blue;
+                    /* border: 10px solid blue; */
                     transform: translateY(-100%);
                     position: relative;
 
@@ -84,7 +85,9 @@
             animation: walk 0.6s steps(4) infinite;
         }
         @keyframes back {
-
+            to {
+                left: -15000px;
+            }
         }
     </style>
 </head>

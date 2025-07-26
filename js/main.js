@@ -4,6 +4,10 @@ const level = 15;
 let left = 50;
 let bottom = 300;
 let isJumping = false;
+let jumpCount = 0;
+let jumpTimeout = null;
+let secondJumpAvailable = false;
+
 
 // width to street ////
 let fullWidth = window.innerWidth;
@@ -25,39 +29,63 @@ for (let i = 0; i < level; i++) {
     street.appendChild(myDiv);
   }
 }
-// create div to street ////
-///////////////keyup//////////////////
+
 document.addEventListener("keydown", (e) => {
-  if (e.keyCode === 39 || e.code === "ArrowRight" || e.key === "ArrowRight") {
+  if (e.key === "ArrowRight") {
     e.preventDefault();
+    mario.classList.remove("stand");
+    mario.classList.add("walk");
 
-    mario.classList.remove("stand")
-    mario.classList.add("walk")
-
-    left += 10;
+    left += 20;
     mario.style.left = left + "px";
     mario.style.transform = "scaleX(1)";
   }
 
-  if (e.code === "Space" && !isJumping) {
-        mario.classList.remove("walk")
-    isJumping = true;
-    mario.style.bottom = bottom + 300 + "px";
+  // پرش اول
+  if (e.code === "Space") {
+    e.preventDefault();
 
-    setTimeout(() => {
-      mario.style.bottom = bottom + "px";
-      isJumping = false;
-    }, 500);
+    if (!isJumping) {
+      isJumping = true;
+      jumpCount = 1;
+      mario.style.bottom = bottom + 250 + "px";
+      secondJumpAvailable = true;
+
+      jumpTimeout = setTimeout(() => {
+        if (jumpCount === 1) {
+          mario.style.bottom = bottom + "px";
+          isJumping = false;
+          jumpCount = 0;
+          secondJumpAvailable = false;
+        }
+      }, 700);
+    }
+
+    // پرش دوم
+    else if (isJumping && secondJumpAvailable && jumpCount === 1) {
+      mario.style.bottom = bottom + 350 + "px";
+      jumpCount = 2;
+      secondJumpAvailable = false;
+
+      if (jumpTimeout) clearTimeout(jumpTimeout);
+
+      setTimeout(() => {
+        mario.style.bottom = bottom + "px";
+        isJumping = false;
+        jumpCount = 0;
+      }, 700);
+    }
   }
 });
+
 ///////////////keyup//////////////////
 // get left of .stop//
-const myLeft = []
-let myStop = document.querySelectorAll('.stop')
-console.log(myStop)
-myStop.forEach((val, i)=>{
-    let temp = (fullWidth * (i + 1))+(val.offsetLeft)
-    myLeft.push(temp)
-})
-console.log(myLeft)
+const myLeft = [];
+let myStop = document.querySelectorAll(".stop");
+console.log(myStop);
+myStop.forEach((val, i) => {
+  let temp = fullWidth * (i + 1) + val.offsetLeft;
+  myLeft.push(temp);
+});
+console.log(myLeft);
 // get left of .stop//
