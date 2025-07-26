@@ -1,1 +1,1 @@
-# javaScript-gym1
+# javaScript-game1
