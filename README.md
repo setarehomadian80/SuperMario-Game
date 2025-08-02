@@ -17,7 +17,7 @@ Run, jump, and avoid obstacles — but watch out! If you hit one, it’s **Game 
 ## 🎮 Live Demo & Video
 
 🎥 **Watch the gameplay video below**:  
-[▶️ Video Demo (MP4)](https://setarehomadian80.github.io/javaScript-game1/)
+[▶️ Video Demo (MP4)](https://setarehomadian80.github.io/SuperMario-Game/)
 
 ## 🚀 Technologies Used
 
