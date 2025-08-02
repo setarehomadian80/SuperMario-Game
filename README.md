@@ -7,6 +7,13 @@ Run, jump, and avoid obstacles — but watch out! If you hit one, it’s **Game 
 
 ![Gameplay Screenshot](img/Screenshot%202025-08-02%20204047.png)
 
+## ⚠️ Limitations
+
+- ❌ **This project is not responsive.**
+- ✅ It works properly **only on screens with resolution `1920×1080`**.
+- 📱 Not suitable for mobile devices or smaller screens.
+- 🔁 Zoom must be **100%** for proper gameplay.
+
 ## 🎮 Live Demo & Video
 
 🎥 **Watch the gameplay video below**:  
@@ -31,15 +38,3 @@ Run, jump, and avoid obstacles — but watch out! If you hit one, it’s **Game 
 - Auto-scrolling background with CSS animation
 - Responsive game mechanics (but not layout)
 
-## ⚠️ Limitations
-
-- ❌ **This project is not responsive.**
-- ✅ It works properly **only on screens with resolution `1920×1080`**.
-- 📱 Not suitable for mobile devices or smaller screens.
-- 🔁 Zoom must be **100%** for proper gameplay.
-
-## 🧪 How to Run Locally
-
-1. Clone this repo:
-   ```bash
-   git clone https://github.com/your-username/mario-game.git
