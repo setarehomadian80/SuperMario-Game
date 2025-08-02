@@ -3,11 +3,9 @@
 A simple side-scrolling Mario-style game made with HTML, CSS, and JavaScript.  
 Run, jump, and avoid obstacles — but watch out! If you hit one, it’s **Game Over**.  
 
-https://user-images.githubusercontent.com/123456789/your-mario-demo.mp4
-
 ## 👾 Screenshot
 
-![Gameplay Screenshot](https://yourdomain.com/path-to-your-screenshot.png)
+![Gameplay Screenshot](img/Screenshot%202025-08-02%20204047.png)
 
 ## 🎮 Live Demo & Video
 
