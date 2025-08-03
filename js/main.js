@@ -40,7 +40,7 @@ myStop.forEach((val, i) => {
 // حرکت به راست
 document.addEventListener("keydown", (e) => {
   if (e.key === "ArrowRight") {
-    e.preventDefault();
+    e.preventDefault(); 
     if (document.body.classList.contains("game-over")) return;
 
     mario.classList.remove("stand");
