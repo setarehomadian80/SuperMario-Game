@@ -20,7 +20,7 @@
             background-position: 0 0;
             position: absolute;
             left: 50px;
-            bottom: 300px;
+            bottom: 60px;
             z-index: 1000;
             
         }
@@ -29,7 +29,7 @@
             background-image: url(img/back_1920x1080.png);
             background-repeat: repeat-x;
             background-size: 100% 100vh;
-
+            overflow-y: hidden;
            
         }
          body.game-over::after {
@@ -50,25 +50,27 @@
             background-size: cover;
             background-size: 100% 100vh;
             position: relative;
+            
 
             >.street {
                 position: absolute;
                 left: 0;
+                bottom: 90px !important;
                 height: 20px;
                 bottom: 300px;
-                background-color: black;
+                /* background-color: black; */
                 display: flex;
                 animation: back 30s linear forwards;
 
                 >div {
-                    width: 100vw;
-                    height: 300px;
+                    width: 100vw; 
+                    height: 200px;
                     /* border: 10px solid blue; */
                     transform: translateY(-100%);
                     position: relative;
 
                     >.stop {
-                        width: 200px;
+                        width: 80px;
                         background-image: url(img/stop.png);
                         background-size: 100% 100%;
                         background-size: cover;

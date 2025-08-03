@@ -2,11 +2,12 @@ const street = document.querySelector(".street");
 const mario = document.querySelector(".mario");
 const level = 15;
 let left = 50;
-let bottom = 300;
+let bottom = 60;
 let isJumping = false;
 let jumpCount = 0;
 let jumpTimeout = null;
 let secondJumpAvailable = false;
+
 
 // تنظیم عرض خیابان
 let fullWidth = window.innerWidth;
@@ -20,7 +21,7 @@ for (let i = 0; i < level; i++) {
     let x = document.createElement("div");
     x.classList.add("stop");
     x.style.left = Math.floor(Math.random() * 85) + 10 + "%";
-    x.style.height = Math.floor(Math.random() * 50) + 150 + "px";
+    x.style.height = Math.floor(Math.random() * 50) + 100 + "px";
     myDiv.appendChild(x);
   }
 
@@ -62,7 +63,7 @@ document.addEventListener("keydown", (e) => {
     if (!isJumping) {
       isJumping = true;
       jumpCount = 1;
-      mario.style.bottom = bottom + 250 + "px";
+      mario.style.bottom = bottom + 150 + "px";
       secondJumpAvailable = true;
 
       jumpTimeout = setTimeout(() => {
@@ -78,7 +79,7 @@ document.addEventListener("keydown", (e) => {
 
     // پرش دوم
     else if (isJumping && secondJumpAvailable && jumpCount === 1) {
-      mario.style.bottom = bottom + 350 + "px";
+      mario.style.bottom = bottom + 170 + "px";
       jumpCount = 2;
       secondJumpAvailable = false;
 
